@@ -9,6 +9,42 @@ const router = createRouter({
             component: AppLayout,
             children: [
                 {
+                    path: '/integration/marketplace',
+                    component: () => import('@/views/integration/MarketPlace.vue'),
+                    children: [
+                        {
+                            path: '/integration/marketplace',
+                            component: () => import('@/views/integration/marketplace/MercadoLivre.vue')
+                        },
+                        {
+                            path: '/integration/marketplace/shopee',
+                            component: () => import('@/views/integration/marketplace/Shopee.vue')
+                        }
+                    ]
+                },
+                {
+                    path: '/outbound/outbound',
+                    name: 'outbound',
+                    component: () => import('@/views/outbound/Outbound.vue')
+                },
+                {
+                    path: '/outbound/create',
+                    name: 'outboundcreate',
+                    component: () => import('@/views/outbound/OutboundCreate.vue')
+                },
+                {
+                    path: '/outbound/picking',
+                    name: 'picking',
+                    component: () => import('@/views/outbound/Picking.vue')
+                },
+                {
+                    path: '/outbound/packing',
+                    name: 'packing',
+                    component: () => import('@/views/outbound/Packing.vue')
+                },
+
+
+                {
                     path: '/',
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
