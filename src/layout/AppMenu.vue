@@ -5,6 +5,18 @@ import AppMenuItem from './AppMenuItem.vue';
 
 const model = ref([
     {
+        label: 'Expedição',
+        items: [{ label: 'Expedição', icon: 'pi pi-fw pi-truck', to: '/outbound/outbound' },
+                { label: 'Criar Plano de Expedição', icon: 'pi pi-fw pi-pencil', to: '/outbound/create' },
+                { label: 'Separação', icon: 'pi pi-fw pi-shopping-cart', to: '/outbound/picking' },
+                { label: 'Emapacotamento', icon: 'pi pi-fw pi-box', to: '/outbound/packing' }]
+    },
+    {
+        label: 'Integração',
+        items: [{ label: 'Market Place', icon: 'pi pi-fw pi-shopping-bag', to: '/integration/marketplace' }]
+    },
+
+    {
         label: 'Home',
         items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
     },
