@@ -8,6 +8,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+install axios
 ```
 
 ### Compile and Hot-Reload for Development
@@ -27,3 +28,6 @@ npm run build
 ```sh
 npm run lint
 ```
+
+
+
